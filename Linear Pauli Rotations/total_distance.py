@@ -4,7 +4,7 @@ import pandas as pd
 trace_distances = pd.read_csv('trace_distances.csv', index_col=0)
 
 # 读取 distance_tradition.csv 文件
-distance_tradition = pd.read_csv('distance_tradition.csv')
+distance_tradition = pd.read_csv('distance_updated.csv')
 
 # 初始化结果数据框
 result_data = pd.DataFrame(columns=['partition1', 'partition2', 'total_distance'])
