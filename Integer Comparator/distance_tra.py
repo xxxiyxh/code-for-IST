@@ -24,5 +24,5 @@ for x in result_df.index:
             distance = calculate_distance(result_df.loc[x], result_df.loc[y])
             distance_df.loc[len(distance_df)] = [distance, x, y]
 
-output_path = 'D:/lz/测试策略复现工作/Integer Comparator/distance_tradition.csv'
+
 distance_df.to_csv(output_path, sep=',', index=False, header=['distance','partition1','partition2'])
