@@ -1,6 +1,6 @@
 # Linear Amplitude Function
 
-This repository contains the source code and related data for the Linear Amplitude Function project. The project includes various versions of the code with different defects implanted and tools for evaluating and testing the function's performance, particularly in the context of defect detection and measurement.
+This repository contains the source code and related data for the QP Linear Amplitude Function. The project includes various versions of the code with different defects implanted and tools for evaluating and testing the function's performance, particularly in the context of defect detection and measurement.
 
 ## Files and Their Functions
 
