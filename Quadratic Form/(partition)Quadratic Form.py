@@ -28,14 +28,14 @@ if __name__ == '__main__':
     with open(csv_file, mode='r') as file:
         reader = csv.reader(file)
         
-        # 跳过 CSV 文件的首行
+
         next(reader)
         
-        # 遍历 CSV 文件中的每一行（从第二行开始）
+
         test_report = []
         for row in reader:
             
-            # 将每个元素转换为双精度浮点数并添加到数据列表
+    
             flag = []
             if float(row[0]) == 2:
                 flag = [0] + flag
@@ -69,16 +69,16 @@ if __name__ == '__main__':
 
     file_name = "QF4 2.csv"
 
-    # 打开文件以进行写入，newline='' 用于确保在 Windows 上正确处理换行符
+
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
 
-        # 写入表头（如果有的话）
+   
         header = ['partition', 'n', 'm', 'initial_state', 'A', 'b', 'c', 'result']
         writer.writerow(header)
 
         for data in test_report:
-            # 写入数据
+   
             writer.writerow(data)
     print('done!')
         
