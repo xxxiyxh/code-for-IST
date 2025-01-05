@@ -17,12 +17,12 @@ def result_oracle(pro1, pro2):
 
 def generate_base_m_numbers(n, m):
     if n <= 0:
-        return [[]]  # 返回一个包含空列表的列表
+        return [[]]  
 
     if n == 1:
-        return [[i] for i in range(m)]  # 生成 n=1 位的 m 进制数
+        return [[i] for i in range(m)]  
 
-    # 递归生成 n 位的 m 进制数
+  
     smaller_numbers = generate_base_m_numbers(n - 1, m)
     numbers = []
     for digit in range(m):
@@ -63,7 +63,7 @@ def pureStateInput():
     test_report = []
     n_list = np.arange(2, 4)  # [2, 3]
 
-    # 测试
+  
 
     initial_gates = [0, 1]
 
@@ -105,21 +105,21 @@ def pureStateInput():
                             if len(test_report) > 5000:
                                 raise BreakLoop
     except BreakLoop:
-        pass  # 在这里不执行任何操作，只是用于捕获异常
+        pass  
 
-    # 指定要保存的文件名
+ 
     file_name = "test_suites.csv"
 
-    # 打开文件以进行写入，newline='' 用于确保在 Windows 上正确处理换行符
+
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
 
-        # 写入表头（如果有的话）
+     ）
         header = ['n', 'initial_state', 'slope', 'offset', 'oracle_prob', 'test_prob', 'result']
         writer.writerow(header)
 
         for data in test_report:
-            # 写入数据
+           
             writer.writerow(data)
     print('done!')
 
@@ -189,21 +189,21 @@ def mixedStateInput():
                         if len(test_report) > 2500:
                             raise BreakLoop
     except BreakLoop:
-        pass  # 在这里不执行任何操作，只是用于捕获异常
+        pass  
 
-    # 指定要保存的文件名
+ 
     file_name = "test_suites.csv"
 
-    # 打开文件以进行写入，newline='' 用于确保在 Windows 上正确处理换行符
+   
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
 
-        # 写入表头（如果有的话）
+  
         header = ['n', 'slop', 'offset', 'test_result']
         writer.writerow(header)
 
         for data in test_report:
-            # 写入数据
+          
             writer.writerow(data)
     print('done!')
 
