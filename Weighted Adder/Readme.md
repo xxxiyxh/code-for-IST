@@ -5,7 +5,7 @@ This repository contains the source code and related data for the QP Weighted Ad
 ## Files and Their Functions
 
 - `adder.py`: This is the bug-free version of the code implementing the Linear Amplitude Function.
-- `adder_defect.py` to `adder_defect4.py`: These are versions of the code with four different types of defects implanted, intended for testing and evaluation purposes.
+- `weightedAdder_defect.py` to `weightedAdder_defect4.py`: These are versions of the code with four different types of defects implanted, intended for testing and evaluation purposes.
 - `test_main.py`: This script is used to test the defective versions of the code and generate an initial set of test cases.
 - `apfd_ddrt.py`, `apfd_drt.py`, `apfd_rpt.py`, `apfd_rt.py`: These scripts calculate the APFD (Average Percentage of Fault Detection) values after applying four different testing strategies.
 - `depth.py`: This script calculates the depth of the quantum circuit used in the testing.
