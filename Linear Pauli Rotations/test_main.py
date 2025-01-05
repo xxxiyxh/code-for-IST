@@ -73,20 +73,20 @@ def pureStateInput():
                             test_report.append(temp)
 
     except BreakLoop:
-        pass  # 在这里不执行任何操作，只是用于捕获异常
-    # 指定要保存的文件名
+        pass  
+   
     file_name = "test_suites.csv"
 
-    # 打开文件以进行写入，newline='' 用于确保在 Windows 上正确处理换行符
+  
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
 
-        # 写入表头（如果有的话）
+       
         header = ['n','initial_state','slop','offset','basis','oracle_prob','test_prob','result']
         writer.writerow(header)
 
         for data in test_report:
-            # 写入数据
+          
             writer.writerow(data)
     print('done!')
 
@@ -152,20 +152,20 @@ def mixedStateInput():
                                 raise BreakLoop
 
     except BreakLoop:
-        pass  # 在这里不执行任何操作，只是用于捕获异常
-    # 指定要保存的文件名
+        pass  
+
     file_name = "test_suites.csv"
 
-    # 打开文件以进行写入，newline='' 用于确保在 Windows 上正确处理换行符
+
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
 
-        # 写入表头（如果有的话）
+      
         header = ['n', 'slop','offset','basis', 'result']
         writer.writerow(header)
 
         for data in test_report:
-            # 写入数据
+         
             writer.writerow(data)
     print('done!')
 
