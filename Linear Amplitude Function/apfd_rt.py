@@ -3,14 +3,14 @@ import numpy as np
 import random
 
 def read_csv_and_select_data(file_path, m):
-    # 读取CSV文件
+
     df = pd.read_csv(file_path)
 
     selected_data = []
 
     for _ in range(m):
         selected_row = df.sample(n=1)
-        selected_data.append(selected_row['result'].values[0])  # 获取 'result' 列的值并添加到列表
+        selected_data.append(selected_row['result'].values[0])  
     return selected_data
 
 def apfd(test_results):
@@ -30,9 +30,9 @@ for _ in range(num_iterations):
     metric_value_array.append(metric_value)
     average_metric_values.append(metric_value)
 
-# 计算平均值
+
 average_metric = np.mean(average_metric_values)
 print(metric_value_array)
 
-# 打印计算得到的平均指标值
+
 print("Average APFD Metric Value:", average_metric)
